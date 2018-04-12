@@ -58,9 +58,9 @@ def which(program):
     return None
 
 def get_scheduler():
-    if which('bjobs') is not None: 
-        scheduler = 'lsf'
-    elif which('squeue') is not None: 
+    #if which('bjobs') is not None: 
+        #scheduler = 'lsf'
+    if which('squeue') is not None: 
         scheduler = 'slurm'
     else:
         scheduler = None
